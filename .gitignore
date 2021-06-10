@@ -1,1 +1,10 @@
 *.exe
+*.class
+bin/
+.classpath
+.project
+.setting/
+*.jar
+*.war
+*.ear
+.vscode
