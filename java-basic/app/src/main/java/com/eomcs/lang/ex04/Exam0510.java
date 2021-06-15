@@ -26,8 +26,13 @@ public class Exam0510 {
     int arr2[] = new int[5]; // OK! C-style.
 
     // 배열의 크기는 int 타입의 최대 값이다.
-    int[] arr3 = new int[2147483647];
-  }
+    int[] arr3 = new int[2147483645];
+    //=>  java.lang.OutOfMemoryError: Java heap space 오류발생!
+    //=> jvm이 os로부터 사용허가를 받은 메모리 크기를 벗어났기 때문에 발생한 것이다.
+    //해결책?
+    //=> JVM을 실행할 때 최대 힙(heap) 메모리의 크기를 늘리면 된다.
+    //=> JVM 실행 옵션에 다음을 추가하라. -Xms메모리크기
+    //예) java - Xmx20000m...
 }
 
 
