@@ -60,7 +60,7 @@ public class Test01 {
     int LANG_PYTHON = 0b00001000;
     int LANG_PHP =    0b00000100;
     int LANG_HTML =   0b00000010;
-    int LANG_CSS =    0b10000001;
+    int LANG_CSS =    0b00000001;
 
 
 
@@ -71,8 +71,8 @@ public class Test01 {
  
     System.out.println(Integer.toBinaryString(lang2));
  
-    lang2 = LANG_C |  LANG_JAVA | LANG_PYTHON |LANG_HTML;
-    System.out.println(Integer.toBinaryString(lang2));
+    lang2 = LANG_C |  LANG_JAVA | LANG_PYTHON | LANG_HTML;
+    System.out.println(Integer.toBinaryString(lang2)); 
 
     lang2 = lang2 - LANG_JAVA;
     System.out.println(Integer.toBinaryString(lang2));

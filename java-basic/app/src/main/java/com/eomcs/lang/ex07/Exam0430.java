@@ -3,12 +3,13 @@ package com.eomcs.lang.ex07;
 //# 메서드 : 인스턴스와 Heap 메모리 영역
 //
 public class Exam0430 {
-
+  // Heap 메모리에 어떤 변수를 만들어야 하는지 적어 놓은 설계도
   static class MyObject {
     int a;
     int b;
+
   }
-  
+
   static MyObject getMyObject() {
     // Exam03_3.java 에 정의된 MyObject 클래스 사용
     MyObject ref = new MyObject();
@@ -23,6 +24,7 @@ public class Exam0430 {
     ref = getMyObject();
     System.out.println(ref.a);
     System.out.println(ref.b);
+
   }
 }
 
