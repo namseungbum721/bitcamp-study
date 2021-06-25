@@ -6,9 +6,11 @@ public class ArrayList {
   static Object[] list = new Object[MAX_LENGTH];
   static int size = 0;
 
+
   static void append(Object obj) {
     list[size++] = obj;
   }
+
 
   static Object[] toArray() {
     Object[] arr = new Object[size];
@@ -19,9 +21,12 @@ public class ArrayList {
     return arr;
   }
 
+
   static Object retrieve(int index) {
     return list[index];
   }
+
+
   static void remove(int index) {
     for (int i = index; i < size - 1; i++) {
       list[i] = list[i+1];

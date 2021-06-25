@@ -1,39 +1,30 @@
 package com.eomcs;
 
-
 public class Test2 {
-  static class A {
-    int x;
+  static class X {
+    int a;
   }
-  static class B {
-    int y;
-  }
-  static class C {
-    int z;
+
+  static class Y {
+    int b;
   }
 
   public static void main(String[] args) {
-    A r1 = new A();
-    r1.x = 100;
+    X obj1 = new X();
+    Y obj2 = new Y();
 
-    System.out.println(r1.x);
+    //X obj3 = new Y();
+    //Y obj4 = new X();
 
-    Object obj = new A();
-    // obj.x = 100; // x에는 실제 A의 인 스턴스 주소가 저장된 것이 맞지만, 
-    // 컴파일러 입장에서는 obj 변수의 클래스를 가지고 변수를 찾기 때문에
-    // 컴파일 오류 발생!!
+    Object obj5;
+    obj5 = new X();
+    //obj5 = new Y();
 
-    // obj에 들어있는 인스턴스 주소를 제대로 사용하려면
-    // 원래 타입으로 형변환 후 사용하라.
+    X obj6 = (X) obj5;
 
-    A r2 = (A) obj;
+    obj6.a = 100;
 
-
-
-
-
-
-
+    System.out.println(obj6.a);
 
   }
 

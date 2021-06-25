@@ -22,6 +22,8 @@ public class ArrayList2 {
   static Object retrieve(int index) {
     return list[index];
   }
+
+
   static void remove(int index) {
     for (int i = index; i < size - 1; i++) {
       list[i] = list[i+1];
