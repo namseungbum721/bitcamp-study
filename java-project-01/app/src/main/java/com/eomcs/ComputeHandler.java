@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 
 public class ComputeHandler implements Handler {
-  static Scanner keyScan;
+  Scanner keyScan;
+
+  ComputeHandler(Scanner keyScan) {
+    this.keyScan = keyScan;
+  }
 
   public void execute() {
     while(true) {

@@ -1,31 +1,33 @@
 package com.eomcs;
 
-public class Test2 {
-  static class X {
-    int a;
+class Calculator2 {
+  int result;
+
+  static void plus(Calculator2 c, int value) {
+    c.result += value;
   }
-
-  static class Y {
-    int b;
-  }
-
-  public static void main(String[] args) {
-    X obj1 = new X();
-    Y obj2 = new Y();
-
-    //X obj3 = new Y();
-    //Y obj4 = new X();
-
-    Object obj5;
-    obj5 = new X();
-    //obj5 = new Y();
-
-    X obj6 = (X) obj5;
-
-    obj6.a = 100;
-
-    System.out.println(obj6.a);
-
-  }
-
 }
+
+public class Test2 {
+  public static void main(String[] args) {
+    Calculator2 obj1 = new Calculator2();
+    Calculator2 obj2 = new Calculator2();
+
+    Calculator2.plus(obj1,100);
+    Calculator2.plus(obj1,200);
+    Calculator2.plus(obj1,300);
+
+
+
+    Calculator2.plus(obj2,111);
+    Calculator2.plus(obj2,222);
+
+
+    System.out.println(obj1.result);
+    System.out.println(obj2.result);
+
+
+  }
+}
+
+
