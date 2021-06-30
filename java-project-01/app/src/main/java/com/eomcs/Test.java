@@ -13,6 +13,7 @@ public class Test {
     Calculator1.plus(100);
     Calculator1.plus(200);
     Calculator1.plus(300);
+    Calculator1.plus(400);
     System.out.println(Calculator1.result);
 
   }

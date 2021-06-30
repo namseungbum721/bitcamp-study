@@ -138,7 +138,7 @@ public class App2 {
     int index = Integer.parseInt(keyScan.nextLine());
 
     if(index<0 || index >= size) {
-      System.out.println("무효한 게시글 번호입니다.");
+      System.out.println("무효한 게시글 번호");
       return;
     }
 
