@@ -20,7 +20,6 @@ public class App {
 
 
 
-
     menuLoop : while (true) {
       System.out.println("[메뉴]");
       System.out.println("  1 : 게시글관리[1]");
