@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testForm.html</title>
+    <style>
+        * {
+            font-family: 'comic sans ms';
+            font-size: 20pt; 
+        }
+
+        a {
+            font-size: 26pt;
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            font-size: 36pt;
+            text-decoration: none;
+            color: green;
+            font-family: 'comic sans ms';
+        }
+    </style>
+
+<script>
+function nullCheck() {
+    a = document.myForm.code.value;
+    if(a=="" || a==null) {
+        alert("코드를 입력하세요.");
+        myForm.code.focus();
+        return;
+        
+    }
+    b = document.myForm.title.value;
+
+    size = document.myForm.code.length;
+} //end
+
+</script>
+</head>
+
+<body bgcolor="yellow"> <!--background="images/sun.png"-->
+<font face= "궁서체" color = ""><b>화면만들기testForm.html</b></font> <br>
+
+<form name="myForm">
+    코드 : <input type="text" name ="code" >  <br>
+    제목 : <input type="text" name="title" > <br>
+    <input type="button" value="저장" onclick="nullCheck();">
+    <input type="reset" value="취소">
+</form>
+
+<img src="images/bar.gif" alt=""> <p></p>
+<hr size="5" color="red">
+<pre> <!--캡쳐기능, 그대로 출력됨-->
+오늘은 목요일 아침입니다
+내일은 금요일 자바스크립트입니다
+</pre>
+</body>
+
+</html>

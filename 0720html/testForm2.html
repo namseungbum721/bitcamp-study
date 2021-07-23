@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testForm.html</title>
+    <style>
+        * {
+            font-family: 'comic sans ms';
+            font-size: 20pt;
+        }
+
+        a {
+            font-size: 26pt;
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            font-size: 36pt;
+            text-decoration: none;
+            color: green;
+            font-family: 'comic sans ms';
+        }
+    </style>
+
+    <script>
+        function nullCheck() {
+            /*document는 생략이 가능하다*/
+            a = document.myForm.code.value;
+            if (a == "" || a == null) {
+                alert("코드 데이터를 입력하세요.(필수항목)");
+                myForm.code.focus();
+                 /*아래문장을 처리안하고 함수 탈출*/
+                return;
+            } else {
+                b = document.myForm.title.value;
+                if (b == "" || b == null) {
+                    alert("제목을 입력하세요(필수항목)");
+                    myForm.title.focus();
+                  return;
+                } else {}
+            }
+
+            size = document.myForm.code.value.length;
+            if (size != 6) {
+                alert("Code자릿수는 6자리입니다");
+                return;
+            } else {}
+        }
+    </script>
+</head>
+
+<body>
+    <font><b>화면만들기</b></font><br>
+
+    <form name="myForm">
+        코드 : <input type="text" name="code" size=10> <br>
+        제목 : <input type="text" name="title" size=10 ><br>
+        <input type="button" value="저장" onclick="nullCheck();">
+        <input type="reset" value="취소">
+    </form>
+</body>
+
+</html>

@@ -112,7 +112,7 @@ public class BoardHandler implements Handler {
 
     System.out.print("정말 변경하시겠습니까?(y/N) ");
     if (!this.keyScan.nextLine().equals("y")) {
-      System.out.println("게시글 변경을 최소하였습니다.");
+      System.out.println("게시글 변경을 취소하였습니다.");
       return;
     } 
 
